@@ -1,0 +1,70 @@
+
+---
+
+# 🚫 .gitignore (limpo e ideal pro seu projeto)
+
+```gitignore id="nilmignore"
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Test/cache
+.pytest_cache/
+.cache/
+.coverage
+
+# Type check
+.mypy_cache/
+
+# Data (ML)
+data/
+datasets/
+*.csv
+*.h5
+*.npy
+*.npz
+
+# Models
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+
+# Temp
+tmp/
+temp/
+
+# Env vars
+.env
+
+# Embedded / C
+*.o
+*.out
+*.elf
+*.bin
+*.hex
