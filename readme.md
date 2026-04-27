@@ -1,4 +1,4 @@
-# GASF MobileNet NILM
+# NILM Load Classification: Comparing MLP and MobileNet
 
 🇧🇷 Projeto de iniciação científica focado em Non-Intrusive Load Monitoring (NILM), utilizando redes neurais profundas e rasas para classificação de cargas residenciais em sistemas embarcados de baixo custo.
 
@@ -12,7 +12,7 @@ Este projeto investiga a viabilidade do uso de modelos de aprendizado de máquin
 
 A abordagem inclui:
 
-* Transformação de séries temporais em imagens (GAF/RP)
+* Transformação de séries temporais em imagens (GASF)
 * Uso de MobileNet (deep learning)
 * Comparação com MLP (rede rasa)
 * Foco em eficiência computacional para sistemas embarcados
