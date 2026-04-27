@@ -53,11 +53,75 @@ A abordagem inclui:
 
 ---
 
-## 🚀 Como executar
+## 🚀 Como utilizar
+
+O projeto foi desenvolvido de forma **modular**, onde cada script ou notebook deve ser executado de forma independente.
+
+### 📌 Configuração
+
+Em cada arquivo `.py` ou `.ipynb`, existe uma seção no início (cabeçalho) onde você deve definir o **nome do aparelho (load/appliance)** que será utilizado.
+
+Exemplo:
+
+```python
+appliance_name = "fridge"
+```
+
+---
+
+### ⚙️ Execução dos módulos
+
+Você pode rodar cada etapa separadamente, dependendo do que deseja fazer:
+
+#### 🖼️ Geração de imagens (GASF)
+
+Executa notebooks ou scripts responsáveis por converter séries temporais em imagens:
+
+```bash
+python ImagensTreinamentoCasa1.ipynb
+```
+
+ou via Jupyter Notebook:
+
+* Abra o arquivo `.ipynb`
+* Execute todas as células
+
+---
+
+#### 🧠 Treinamento do modelo
+
+Treina a rede (ex: MobileNet) com base nas imagens geradas:
+
+```bash
+python treinamentoMobilenet.py
+```
+
+---
+
+#### 🧪 Teste / Avaliação
+
+Executa a inferência e avaliação do modelo:
+
+```bash
+python testeMobilenet.py
+```
+
+---
+
+### 🧠 Observação importante
+
+* Cada arquivo funciona de forma independente
+* Basta alterar o **nome do aparelho no cabeçalho** para reutilizar o pipeline
+* Isso permite testar facilmente diferentes cargas elétricas
+
+---
+
+### 📦 Requisitos
+
+Instale as dependências antes de executar:
 
 ```bash
 pip install -r requirements.txt
-python treinamentoMobilenet.py
 ```
 
 ---
