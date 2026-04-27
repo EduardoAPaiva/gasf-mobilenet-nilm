@@ -1,4 +1,4 @@
-# GASf MobileNet NILM
+# GASF MobileNet NILM
 
 🇧🇷 Projeto de iniciação científica focado em Non-Intrusive Load Monitoring (NILM), utilizando redes neurais profundas e rasas para classificação de cargas residenciais em sistemas embarcados de baixo custo.
 
