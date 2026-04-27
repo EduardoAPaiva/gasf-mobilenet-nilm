@@ -59,14 +59,53 @@ A transformação de séries temporais em imagens permite o uso de arquiteturas 
 
 ```
 .
-├── exampleimages/        # Exemplos de imagens GAF
-├── treinamentoMobilenet.py
-├── testeMobilenet.py
-├── ImagensTesteCasa2.ipynb
-├── ImagensTreinamentoCasa1.ipynb
-├── imagensTreinamentoCasa5.ipynb
+├── MLP/
+│   ├── dadosCasa1.ipynb
+│   ├── dadosCasa5.ipynb
+│   ├── testeCasa2.ipynb
+│   ├── treinamentoMLP.py
+│   └── testeMLP.py
+│
+├── MobileNet/
+│   ├── treinamentoMobilenet.py
+│   ├── testeMobilenet.py
+│   ├── ImagensTesteCasa2.ipynb
+│   ├── ImagensTreinamentoCasa1.ipynb
+│   ├── imagensTreinamentoCasa5.ipynb
+│   └── exampleimages/
+│
 └── README.md
 ```
+
+---
+
+### 🧠 Organização
+
+* **MLP/**
+  Contém os scripts e notebooks relacionados ao modelo de rede neural rasa (MLP), incluindo:
+
+  * preparação dos dados
+  * treinamento
+  * teste
+  * avaliação
+
+* **MobileNet/**
+  Contém os scripts e notebooks relacionados ao modelo profundo (MobileNet), incluindo:
+
+  * geração de imagens (GASF)
+  * treinamento da CNN
+  * avaliação
+
+---
+
+### 💡 Observação
+
+A separação em duas pastas permite comparar diretamente abordagens:
+
+* **Deep Learning (MobileNet)**
+* **Shallow Learning (MLP)**
+
+mantendo o pipeline organizado e modular.
 
 ---
 
@@ -131,6 +170,8 @@ Executa a inferência e avaliação do modelo:
 ```bash
 python testeMobilenet.py
 ```
+
+Ambos arquivos de testes das redes neurais (testeMobilenet.py e testeMLP.py) calculam o melhor threshold para o modelo e salva as informações de acurácia e f1-score  em um arquivo .txt salvo juntamente do modelo treinado.
 
 ---
 
