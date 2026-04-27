@@ -94,6 +94,7 @@ A transformação de séries temporais em imagens permite o uso de arquiteturas 
 
   * geração de imagens (GASF)
   * treinamento da CNN
+  * teste
   * avaliação
 
 ---
@@ -114,7 +115,7 @@ mantendo o pipeline organizado e modular.
 * Python
 * TensorFlow / Keras
 * NumPy
-* Matplotlib
+* SkLearn
 
 ---
 
@@ -171,7 +172,7 @@ Executa a inferência e avaliação do modelo:
 python testeMobilenet.py
 ```
 
-Ambos arquivos de testes das redes neurais (testeMobilenet.py e testeMLP.py) calculam o melhor threshold para o modelo e salva as informações de acurácia e f1-score  em um arquivo .txt salvo juntamente do modelo treinado.
+Ambos arquivos de testes das redes neurais (`testeMobilenet.py` e `testeMLP.py`) calculam o melhor threshold para o modelo e salva as informações de acurácia e f1-score  em um arquivo .txt salvo juntamente do modelo treinado.
 
 ---
 
@@ -180,16 +181,6 @@ Ambos arquivos de testes das redes neurais (testeMobilenet.py e testeMLP.py) cal
 * Cada arquivo funciona de forma independente
 * Basta alterar o **nome do aparelho no cabeçalho** para reutilizar o pipeline
 * Isso permite testar facilmente diferentes cargas elétricas
-
----
-
-### 📦 Requisitos
-
-Instale as dependências antes de executar:
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
