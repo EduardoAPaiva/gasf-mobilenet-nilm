@@ -19,13 +19,39 @@ A abordagem inclui:
 
 ---
 
-## 🧠 Pipeline
+## 🧠 Pipeline Proposto
 
-1. Aquisição de sinais elétricos
-2. Pré-processamento
-3. Conversão para imagem (GAF/RP)
-4. Treinamento dos modelos
-5. Avaliação
+O pipeline do projeto segue as seguintes etapas:
+
+1. **Aquisição do sinal elétrico**
+   Dados agregados de consumo (potência ativa, potência aparente e tensão), utilizando a base de dados UK-DALE. A partir da lei de ohm, obtém-se os valores de potência reativa e corrente
+
+2. **Segmentação temporal**
+   Divisão do sinal em janelas de diferentes tamanhos, a depender da carga analisada
+
+3. **Transformação para imagem**
+   Aplicação de técnicas como Gramian Angular Summation Field (GASF) para converter séries temporais em imagens utilizando os canais RGB da imagem, onde cada canal representa uma grandeza elétrica diferente (respectivamente: potência ativa, potência reativa e corrente)
+
+4.  **Transformação para vetor**
+   O sinal obtido possui três canais. Para a utilização do MLP, os três canais são concatenados em um único vetor, seguindo a mesma ordem apresentada no item 3
+
+5. **Treinamento dos modelos**
+
+   * MobileNet (rede profunda, otimizada para eficiência)
+   * MLP (rede rasa para comparação)
+
+6. **Classificação da carga**
+   Identificação do aparelho (ex: geladeira, micro-ondas, etc.)
+
+7. **Avaliação de desempenho**
+   Cada modelo treinado é avaliado utilizando duas métricas de avaliação, sendo elas a acurácia e o *f1-score*
+
+---
+
+### 💡 Motivação
+
+A transformação de séries temporais em imagens permite o uso de arquiteturas de visão computacional (CNNs), enquanto o uso de MobileNet torna o sistema viável para execução em dispositivos embarcados de baixo custo.
+
 
 ---
 
